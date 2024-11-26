@@ -1,25 +1,27 @@
-# <img src="https://github.com/user-attachments/assets/b8249113-d515-4c91-a12a-f134813614e8" height="60" valign="middle" alt="Safe{Wallet}" style="background: #fff; padding: 20px; margin: 0 -20px" />
+## 环境
+| 组件   | 版本 | 备注  |
+|------|--|-----|
+| NODE | v20.12.1| --- |
 
-[![License](https://img.shields.io/github/license/safe-global/safe-wallet-web)](https://github.com/safe-global/safe-wallet-web/blob/main/LICENSE)
-![Tests](https://img.shields.io/github/actions/workflow/status/safe-global/safe-wallet-web/test.yml?branch=main&label=tests)
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/safe-global/safe-wallet-web)
-[![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/safe-global/safe-wallet-web/badge)](https://www.gitpoap.io/gh/safe-global/safe-wallet-web)
+## 框架
+本应用程序使用以下框架构建：
 
-Safe{Wallet} is a smart contract wallet for Ethereum and other EVM chains. Based on Gnosis Safe multisig contracts.
+- [Safe Core SDK](https://github.com/safe-global/safe-core-sdk)
+- [Safe Gateway SDK](https://github.com/safe-global/safe-gateway-typescript-sdk)
+- Next.js
+- React
+- Redux
+- MUI
+- ethers.js
+- web3-onboard
 
-This repository is the frontend of the Safe{Wallet} app.
+## 使用本地环境进行启动
 
-## Contributing
+### 环境变量
 
-Contributions, be it a bug report or a pull request, are very welcome. Please check our [contribution guidelines](CONTRIBUTING.md) beforehand.
+创建一个包含环境变量的 `.env` 文件。您可以使用`.env.example`文件作为参考。  
 
-## Getting started with local development
-
-### Environment variables
-
-Create a `.env` file with environment variables. You can use the `.env.example` file as a reference.
-
-Here's the list of all the environment variables:
+下面是所有环境变量的列表：   
 
 | Env variable                                      | Description                                                                                                                                                             |
 | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -47,11 +49,11 @@ Here's the list of all the environment variables:
 | `NEXT_PUBLIC_FIREBASE_VAPID_KEY_STAGING`          | FCM vapid key on staging                                                                                                                                                |
 | `NEXT_PUBLIC_SPINDL_SDK_KEY`                      | [Spindl](http://spindl.xyz) SDK key                                                                                                                                     |
 
-If you don't provide some of the variables, the corresponding features will be disabled in the UI.
+如果不提供某些变量，用户界面中相应的功能将被禁用。
 
-### Running the app locally
+### 运行本地的应用
 
-Install the dependencies:
+安装依赖
 
 ```bash
 yarn
@@ -63,13 +65,13 @@ Generate types:
 yarn postinstall
 ```
 
-Run the development server:
+运行开发环境:
 
 ```bash
 yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the app.
+使用浏览器打开[http://localhost:3000](http://localhost:3000)查看应用
 
 ## Lint
 
@@ -128,16 +130,3 @@ yarn cmp MyNewComponent
 
 This repo has a pre-push hook that runs the linter (always) and the tests (if the `RUN_TESTS_ON_PUSH` env variable is set to true)
 before pushing. If you want to skip the hooks, you can use the `--no-verify` flag.
-
-## Frameworks
-
-This app is built using the following frameworks:
-
-- [Safe Core SDK](https://github.com/safe-global/safe-core-sdk)
-- [Safe Gateway SDK](https://github.com/safe-global/safe-gateway-typescript-sdk)
-- Next.js
-- React
-- Redux
-- MUI
-- ethers.js
-- web3-onboard
