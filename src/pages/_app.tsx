@@ -116,30 +116,22 @@ const WebCoreApp = ({
   return (
     <Provider store={reduxStore}>
       <Head>
-        <title key="default-title">{'Safe{Wallet}'}</title>
+        <title key="default-title">RZCODE</title>
         <MetaTags prefetchUrl={GATEWAY_URL} />
       </Head>
 
       <CacheProvider value={emotionCache}>
         <AppProviders>
           <CssBaseline />
-
           <InitApp />
-
           <PageLayout pathname={router.pathname}>
             <Component {...pageProps} key={safeKey} />
           </PageLayout>
-
           <CookieAndTermBanner />
-
           <OutreachPopup />
-
           <Notifications />
-
           <Recovery />
-
           <CounterfactualHooks />
-
           <PkModulePopup />
         </AppProviders>
       </CacheProvider>
